@@ -55,7 +55,7 @@ push()
     noStroke()
     fill(33,110,32)
     rect(windowWidth/2, 0, 5, 200+(vol1*20),30);
-    image(monkey,windowWidth/2,20+(vol1*20),150)
+    image(monkey,windowWidth/2-15,20+(vol1*20),150)
   pop()
  }
 
