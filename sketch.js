@@ -54,7 +54,7 @@ push()
     for(let i=0;i < 10;i++){
     noStroke()
     fill(33,110,32)
-    rect(500, 0, 5, 200+(vol1*20),30);
+    rect(windowWidth/2, 0, 5, 200+(vol1*20),30);
     image(monkey,windowWidth/2,20+(vol1*20),150)
   pop()
  }
