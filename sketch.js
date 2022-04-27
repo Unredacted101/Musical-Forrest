@@ -15,7 +15,7 @@ function preload() {
  snow=loadImage('pngfind.com-snow-flakes-png-845479.png')
   monkey=loadImage("Little Monkey by HendryRoesly on DeviantArt.png")
   for(let i = 0; i<songs.length;i++){
-  sounds[i] = loadSound(songs[i]); 
+  sounds[i] = loadSound(songs[i]);
  }
   rainSound = loadSound('heavy_rain_sound_effect_non_copyrighted_free_download_1676662281634673767.mp3')
  }
@@ -23,9 +23,9 @@ function preload() {
 let leafY = [];
 let rainY = []
 let fireflyY = []
-  
+
 function setup() {
-  createCanvas(1000, 1000);
+  createCanvas(windowWidth, windowHeight);
   sounds[x].play()
   amp = new p5.Amplitude()
   let virus = random(300,500)
@@ -49,23 +49,23 @@ push()
   }else if (x==1){
    tint(255,227,105)
    background(BG)
-    
+
   push()
-    for(let i=0;i < 10;i++){ 
+    for(let i=0;i < 10;i++){
     noStroke()
     fill(33,110,32)
     rect(500, 0, 5, 200+(vol1*20),30);
     image(monkey,445,20+(vol1*20),150)
   pop()
  }
-  
+
   }else {
      background(BG)
      noTint()
    }
- pop() 
+ pop()
   let vol = amp.getLevel() * 5
-  
+
 if (mouseIsPressed) {
  for (let i = 0; i < rainY.length; i++) {
     noStroke()
@@ -73,7 +73,7 @@ if (mouseIsPressed) {
     let rainX = width * i / rainY.length;
     rect(rainX, rainY[i] *(10+vol), 5,10);
     rainY[i]++;
-    
+
     if (rainY[i] > height) {
       rainY[i] = 0;
      }
@@ -120,9 +120,9 @@ else if (x==0){
       fireflyY[i]+= 3+vol;
     if (fireflyY[i] > height) {
       fireflyY[i] = 0;
-    
+
     }
-    } 
+    }
   }
 }
 
@@ -149,5 +149,3 @@ function keyPressed() {
   }
 
 }
-    
-  
