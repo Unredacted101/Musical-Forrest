@@ -48,7 +48,8 @@ function setup() {
 function draw() {
  if (mode == 0) {
   let vol1 = amp.getLevel() * 5
-  background(start);
+  background(207, 235, 52);
+  image(start,0,0,windowHeight,windowWidth)
   image(bird,mouseX,mouseY+(vol1*20),100,100)
   }
 else{
