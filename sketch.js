@@ -14,6 +14,7 @@ function preload() {
   Tree=loadImage('pixilart-drawing (1).png')
   start=loadImage('loadingscreen.png')
   bird = loadImage('birdie.png')
+  bgmusic= loadSound("yt5s.com - sftspkn - promise (w. Ayzic) (128 kbps).mp3")
   BG=loadImage('forrest background.png')
   sun=loadImage('pixel-leaf-vector-1481606.png')
  snow=loadImage('pngfind.com-snow-flakes-png-845479.png')
@@ -34,6 +35,7 @@ function setup() {
   button.position(windowWidth/2.5, windowHeight/2.5);
   button.mousePressed(updatemode);
   createCanvas(windowWidth, windowHeight);
+  bgmusic.play()
   sounds[x].play()
   amp = new p5.Amplitude()
   let virus = random(300,500)
