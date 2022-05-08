@@ -47,12 +47,14 @@ function setup() {
 
 function draw() {
  if (mode == 0) {
+  sounds[x].setVolume(0)
   let vol1 = amp.getLevel() * 5
   background(207, 235, 52);
   image(start,0,0,windowWidth,windowHeight)
   image(bird,mouseX,mouseY+(vol1*20),100,100)
   }
 else{
+sounds[x].setVolume(1)
 push()
   let vol1 = amp.getLevel() * 5
   if (x==2){
