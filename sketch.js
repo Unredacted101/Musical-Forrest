@@ -56,6 +56,7 @@ function draw() {
   image(bird,mouseX,mouseY+(vol1*20),100,100)
   }
 else{
+bgmusic.stop()
 sounds[x].setVolume(1)
 push()
   let vol1 = amp.getLevel() * 5
